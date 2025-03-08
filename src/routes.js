@@ -1,3 +1,4 @@
+import Container from "components/Container";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import Favorites from "pages/Favorites";
@@ -8,10 +9,12 @@ export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/favoritos" element={<Favorites />} />
-      </Routes>
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favoritos" element={<Favorites />} />
+        </Routes>
+      </Container>
       <Footer />
     </BrowserRouter>
   );
