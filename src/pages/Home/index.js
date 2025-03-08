@@ -2,15 +2,12 @@ import styles from "./Home.module.css";
 
 import Banner from "components/Banner";
 import Card from "components/Card";
-import Footer from "components/Footer";
-import Header from "components/Header";
 import Title from "components/Title";
 import movies from "json/db.json";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
         <Banner bannerUrl="home" />
         <Title>
@@ -27,7 +24,6 @@ export default function Home() {
           ))}
         </section>
       </main>
-      <Footer />
     </>
   );
 }
