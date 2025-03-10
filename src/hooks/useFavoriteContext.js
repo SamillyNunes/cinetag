@@ -16,8 +16,13 @@ export function useFavoriteContext() {
     return setFavorites(listWithoutItem);
   }
 
+  function checkFavorite(movieId){
+    return favorites.some(f => f.id===movieId);
+  }
+
   return {
     favorites, 
-    addFavorite
+    addFavorite,
+    checkFavorite,
   }
 }
